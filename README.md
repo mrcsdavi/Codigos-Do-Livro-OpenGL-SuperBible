@@ -1,0 +1,1 @@
+Aqui vou colocar alguns dos códigos sample do livro OpenGl Superbible que estou convertendo de C para Python, apenas para fins educativos. O OpenGL usado é o antigo 2.1, já a edição do livro é a quarta.
