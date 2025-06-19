@@ -10,7 +10,7 @@ def init():
     glClearColor(0,0,0,1)
     glColor3f(0,1,0)
     glShadeModel(GL_FLAT)
-    glFrontFace(GL_CW)
+   
 
 def render():
     
@@ -34,11 +34,12 @@ def render():
         glPolygonMode(GL_BACK, GL_FILL)
     
     glPushMatrix()
-    glRotatef(200, 0.0, 0.0, 0.0)
-    glRotatef(40, 0.0, 1.0, 0.0)
+    glRotatef(900, -0.5, 1.0, 0.0)
+    glRotatef(-80, 0.0, 1.0, 0.0)
 
     # 1
 
+    glFrontFace(GL_CW) #clockwise
     glBegin(GL_TRIANGLE_FAN)
 
     glVertex3f(0.0, 0.0, 0.75); 
@@ -57,15 +58,15 @@ def render():
         iPivot += 1 # ?
 
         glVertex2f(x, y)
-
+        
         angle += (GL_PI/8.0)
-
+        
     glEnd()
 
     # 2
-
+    glFrontFace(GL_CCW) # correção do culling - counter-clockwise
     glBegin(GL_TRIANGLE_FAN)
-
+    
     glVertex2f(0.0, 0.0); 
 
     # alterar o angulo
