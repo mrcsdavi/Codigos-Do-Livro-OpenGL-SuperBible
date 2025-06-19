@@ -65,7 +65,7 @@ def render():
 
     # 2
     glFrontFace(GL_CCW) # correção do culling - counter-clockwise
-    glBegin(GL_TRIANGLE_FAN)
+    glBegin(GL_TRIANGLE_FAN)#
     
     glVertex2f(0.0, 0.0); 
 
